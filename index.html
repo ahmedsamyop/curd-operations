@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUDS JS</title>
+  <!-- Normalize File -->
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <!-- Main Css File -->
+  <link rel="stylesheet" href="./assets/css/app.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="./assets/img/logoE2.png" alt="">
+    <h1>Management</h1>
+    <p>Data Management Operations</p>
+  </div>
+
+  <!-- Crud [Inputs] -->
+  <div class="crud">
+    <div class="container">
+      <div class="box">
+        <i class="fa-solid fa-file-signature"></i>
+        <input type="text" placeholder="Title" id="title">
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-coins"></i>
+        <input type="text" placeholder="Price" id="price">
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-plus"></i>
+        <input type="text" placeholder="Count" id="count">
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-globe"></i>
+        <input type="text" placeholder="Category" id="category">
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-percent"></i>
+        <input type="text" placeholder="Discount" id="discount">
+        <p class="total" id="total">Total :<span></span></p>
+      </div>
+
+      <button type="submit" id="create">Create</button>
+    </div>
+  </div>
+
+  <!-- Product [Output] -->
+  <div class="Product">
+    <div class="container">
+      <h3>Available Data</h3>
+      <div class="content">
+        <table>
+          <thead>
+            <tr>
+              <td>ID</td>
+              <td>Title</td>
+              <td>Price</td>
+              <td>Category</td>
+              <td>Discount</td>
+              <td>Total</td>
+              <td>Updata</td>
+              <td>Delete</td>
+            </tr>
+          </thead>
+          <tbody id="result">
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Main JS -->
+  <script src="./assets/js/app.js"></script>
+  <!-- Font Awesome JS-->
+  <script src="./assets/js/all.min.js"></script>
+</body>
+</html>

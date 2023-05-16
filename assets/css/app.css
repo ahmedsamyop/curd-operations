@@ -1,0 +1,216 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --bg-dark: #023e8a;
+  --bg-dark-sec:#1d3557;
+  --bg-ligth: #00b4d8;
+  --bg-crud:#607d8b;
+  --main-transition: 0.5s;
+  --main-padding-top: 50px;
+  --main-padding-bottom: 50px;
+  --main-shadow: 0 0 8px 0 black;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+
+.header {
+  background-image: linear-gradient(to right, var(--bg-dark) , black );
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--main-shadow);
+}
+.header img {
+  margin-top: 10px;
+  width: 80px;
+}
+.header h1 {
+  color: var(--bg-ligth);
+}
+.header p {
+  font-size: 22px;
+}
+
+
+
+/* Crud */
+.crud {
+  background-image: linear-gradient(to right, var(--bg-ligth) , var(--bg-dark) );
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.crud .container {
+  display: flex;
+  flex-direction: column;
+}
+.crud .container .box {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.crud .container .box svg {
+  flex-basis: 5%;
+  font-size: 25px;
+  color: white;
+}
+.crud .container .box input{
+  flex: 1;
+  background-color: var(--bg-dark-sec);
+  color: #fff;
+  font-size: 20px;
+  padding: 15px;
+
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  caret-color: var(--bg-ligth);
+  transition: var(--main-transition);
+}
+.crud .container .box input::placeholder {
+  color: var(--bg-ligth);
+}
+.crud .container .box input:focus {
+  background-color: black;
+}
+.crud .container .box input:focus::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.crud .container .box .total {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 200px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: var(--bg-dark);
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crud .container .box .total span {
+  margin-left: 10px;
+  color: #00ff0a;
+  font-weight: normal;
+  transition: var(--main-transition);
+}
+
+.crud .container button {
+  width: fit-content;
+  font-size: 25px;
+  padding: 10px 80px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--bg-dark-sec);
+  transition: var(--main-transition);
+}
+.crud .container button:hover {
+  background-image: linear-gradient(to right, black , var(--bg-dark) );
+  color: var(--bg-ligth);
+}
+
+
+
+/* Produc */
+.Product {
+  background-color: var(--bg-dark-sec);
+  overflow: hidden;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+} 
+.Product .container h3{
+  text-align: center;
+  font-weight: normal;
+  font-size: 25px;
+}
+.Product .container table {
+  width: 100%;
+  border-spacing: 0;
+}
+table thead td {
+  background-color: black;
+  color: var(--bg-ligth);
+  font-size: 20px;
+}
+table td {
+  text-align: center;
+  padding: 10px 5px;
+  border-bottom: 2px solid var(--bg-crud);
+}
+table td:not(:last-child) {
+  border-right: 2px solid var(--bg-crud);
+}
+table td.btn {
+  background-color: rgb(255 255 255 / 21%);
+  color: black;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+table td.update:hover {
+  background-image: linear-gradient(to right, #009688 , var(--bg-dark) );
+  color: white;
+}
+table td.delete:hover {
+  background-image: linear-gradient(to right, #e91e63 , var(--bg-dark) );
+  color: white;
+}
+table td.btn svg {
+  margin-left: 5px;
+}
+@media (max-width: 767px) {
+  .Product .container .content{
+    overflow-x: scroll;
+  }
+}
+
+
